@@ -1,0 +1,49 @@
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
+      button{
+        color:black;
+        background-color:transparent;
+        padding: 15px 32px;	
+        border: 2px solid black;	
+      }
+      button:hover{
+        color:white;
+        background-color: black;
+        border:none;
+        padding: 15px 32px;	
+      }
+      div{
+        text-align: center;
+      }
+      body{
+        background-image:url("http://photo.kids21.cn/tpzk/201305/W020130506586817535301.jpg");
+        background-size:cover;
+      }
+      </style>
+</head>
+<body>
+		<br>
+		<div>
+			<br><br>
+			<img src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg" alt="Mountain View" style="width:304px;height:228px;">
+			<br>
+			<h2>測試你是不是正妹</h2> 
+			輸入姓名<input id="name"></input><br><br>
+			<button onclick="outPutName()">ClickMe</button>
+         <h1 id="showName"></h1>
+		</div>
+      <script>
+         function outPutName(){
+             let inputName = document.getElementById('name').value;
+             let randomNumber = Math.random()
+             if(randomNumber<0.5){
+              document.getElementById("showName").innerHTML = inputName + "是大正妹！";
+             }else{
+              document.getElementById("showName").innerHTML = inputName + "不是大正妹！";
+             }
+         }
+      </script>
+</body>
+
+
