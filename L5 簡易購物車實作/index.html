@@ -86,12 +86,18 @@
       })
       document.getElementById('result').innerHTML=htmlResult
     }
+    function overpay(){
+      alert("結帳成功")
+      purchase=[]
+      document.getElementById('result').innerHTML=''
+      document.getElementById('resultCheck').innerHTML=''
+    }
     function pay(){
       let paymoney = 0 
       purchase.forEach((prod)=>{
         paymoney = paymoney + prod.price
       })
-      document.getElementById('resultCheck').innerHTML='<p>總價：'+paymoney+'</p><button onclick=alert("結帳成功")>確認付款</button>'
+      document.getElementById('resultCheck').innerHTML='<p>總價：'+paymoney+'</p><button onclick=overpay()>確認付款</button>'
     }
   </script>
 </body>
